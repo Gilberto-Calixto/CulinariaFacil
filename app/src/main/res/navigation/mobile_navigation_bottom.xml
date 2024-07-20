@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_bottom"
+    app:startDestination="@id/nav_all"
+    >
+
+    <fragment
+        android:id="@+id/nav_all"
+        android:label="Todos"
+        android:name="com.corevm.culinariafacil.view.ListFoodFragment"
+        tools:layout="@layout/fragment_list_food"
+        />
+
+    <fragment
+        android:id="@+id/nav_food_day"
+        android:label="Comida do dia"
+        android:name="com.corevm.culinariafacil.view.FoodDayFragment"
+        tools:layout="@layout/fragment_food_day"
+        />
+
+</navigation>
