@@ -2,7 +2,7 @@ package com.corevm.culinariafacil.model
 
 interface ListCallck {
 
-    fun omSucess()
+    fun omSucess(list: MutableList<Reciver>)
 
     fun onError()
 

@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.corevm.culinariafacil.databinding.ItemListFoodBinding
 import com.corevm.culinariafacil.model.Reciver
 
-class ListFoodAdapter(private val list: List<Reciver>) : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>() {
+class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>() {
+
+    private lateinit var list: MutableList<Reciver>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListFoodAdapter.ListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -21,6 +23,13 @@ class ListFoodAdapter(private val list: List<Reciver>) : RecyclerView.Adapter<Li
     }
 
     override fun getItemCount() = list.size
+
+    fun addAll(list: MutableList<Reciver>) {
+
+        this.list = list
+        list.addAll(list)
+        notifyDataSetChanged()
+    }
 
     inner class ListViewHolder(binding: ItemListFoodBinding): RecyclerView.ViewHolder(binding.root) {
 
