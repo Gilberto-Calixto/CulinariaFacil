@@ -14,11 +14,11 @@ class ListFoodPresenter(private val view: ListFoodFragment): ListCallck {
         data.findReceivesData(this)
     }
 
-    override fun omSucess(list: MutableList<Reciver>) {
+    override fun onSucess(list: List<Reciver>) {
         view.showList(list)
     }
 
-    override fun onError() {
+    override fun onError(message: String) {
 
     }
 

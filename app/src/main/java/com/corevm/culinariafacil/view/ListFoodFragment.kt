@@ -35,12 +35,10 @@ class ListFoodFragment: Fragment() {
 
         val rcv: RecyclerView = view.findViewById(R.id.rcv_list_food)
         rcv.layoutManager = LinearLayoutManager(requireContext())
-
-
         rcv.adapter = adapter
     }
 
-    fun showList(list: MutableList<Reciver>) {
-        adapter.addAll(list)
+    fun showList(list: List<Reciver>) {
+        adapter.list(list)
     }
 }

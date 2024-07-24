@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.corevm.culinariafacil.databinding.ItemListFoodBinding
+import com.corevm.culinariafacil.model.ListReceives
 import com.corevm.culinariafacil.model.Reciver
 
 class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>() {
 
-    private lateinit var list: MutableList<Reciver>
+    private var list = listOf<Reciver>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListFoodAdapter.ListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -24,10 +25,9 @@ class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>()
 
     override fun getItemCount() = list.size
 
-    fun addAll(list: MutableList<Reciver>) {
+    fun list(list: List<Reciver>) {
 
         this.list = list
-        list.addAll(list)
         notifyDataSetChanged()
     }
 
@@ -35,6 +35,7 @@ class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>()
 
         val img = binding.imageListFood
         val textFood = binding.textListFood
+        val duration = binding.durationListFood
 
         fun bind(item: Reciver) {
             //Trocar os item
