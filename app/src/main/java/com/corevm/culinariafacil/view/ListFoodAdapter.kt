@@ -4,12 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.corevm.culinariafacil.databinding.ItemListFoodBinding
-import com.corevm.culinariafacil.model.ListReceives
-import com.corevm.culinariafacil.model.Reciver
+import com.corevm.culinariafacil.model.ExtendedIngredient
+import com.corevm.culinariafacil.model.Recipe
 
-class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>() {
+class ListFoodAdapter(private val list: List<ExtendedIngredient>) : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>() {
 
-    private var list = listOf<Reciver>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListFoodAdapter.ListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -25,11 +24,6 @@ class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>()
 
     override fun getItemCount() = list.size
 
-    fun list(list: List<Reciver>) {
-
-        this.list = list
-        notifyDataSetChanged()
-    }
 
     inner class ListViewHolder(binding: ItemListFoodBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -37,7 +31,7 @@ class ListFoodAdapter() : RecyclerView.Adapter<ListFoodAdapter.ListViewHolder>()
         val textFood = binding.textListFood
         val duration = binding.durationListFood
 
-        fun bind(item: Reciver) {
+        fun bind(item: ExtendedIngredient) {
             //Trocar os item
             textFood.text = item.name
 

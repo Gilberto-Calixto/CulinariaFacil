@@ -6,8 +6,7 @@
     <item
         android:id="@+id/nav_all"
         android:title="Todos"
-        android:titleTextAppearance="@style/MenuTextApperance"
-        android:icon="@drawable/baseline_clear_all_24"/>
+        android:icon="@drawable/explore_24"/>
 
     <item
         android:id="@+id/nav_food_day"

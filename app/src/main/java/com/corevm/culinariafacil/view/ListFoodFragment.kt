@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.corevm.culinariafacil.R
-import com.corevm.culinariafacil.model.Reciver
+import com.corevm.culinariafacil.model.ExtendedIngredient
+import com.corevm.culinariafacil.model.Recipe
 import com.corevm.culinariafacil.presenter.ListFoodPresenter
 
 class ListFoodFragment: Fragment() {
 
-    private val adapter = ListFoodAdapter()
     private lateinit var presenter: ListFoodPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,12 +33,13 @@ class ListFoodFragment: Fragment() {
 
         presenter.findRecives()
 
-        val rcv: RecyclerView = view.findViewById(R.id.rcv_list_food)
-        rcv.layoutManager = LinearLayoutManager(requireContext())
-        rcv.adapter = adapter
+
     }
 
-    fun showList(list: List<Reciver>) {
-        adapter.list(list)
+    fun showList(list: List<ExtendedIngredient>) {
+        val adapter = ListFoodAdapter(list)
+        val rcv: RecyclerView? = view?.findViewById(R.id.rcv_list_food)
+        rcv?.layoutManager = LinearLayoutManager(requireContext())
+        rcv?.adapter = adapter
     }
 }
