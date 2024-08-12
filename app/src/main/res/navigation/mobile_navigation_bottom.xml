@@ -11,7 +11,11 @@
         android:label="Todos"
         android:name="com.corevm.culinariafacil.view.ListFoodFragment"
         tools:layout="@layout/fragment_list_food"
-        />
+        >
+        <action
+            android:id="@+id/action_nav_all_to_nav_item"
+            app:destination="@id/nav_item" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_food_day"
@@ -19,5 +23,11 @@
         android:name="com.corevm.culinariafacil.view.FoodDayFragment"
         tools:layout="@layout/fragment_food_day"
         />
+
+    <fragment
+        android:id="@+id/nav_item"
+        android:label="Item"
+        android:name="com.corevm.culinariafacil.view.ItemFragment"
+        tools:layout="@layout/fragment_item"/>
 
 </navigation>

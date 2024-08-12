@@ -56,4 +56,7 @@ dependencies {
     //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    //Picasso
+    implementation("com.squareup.picasso:picasso:2.8")
 }

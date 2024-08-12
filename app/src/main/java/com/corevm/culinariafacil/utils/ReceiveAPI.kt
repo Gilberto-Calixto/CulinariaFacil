@@ -18,6 +18,7 @@ interface ReceiveAPI {
         @Query("ids") ids: String, @Query("apiKey") apiKey: String = Retrofit.API_KEY
     ): Call<List<Recipe>>
 
+
 }
 
 

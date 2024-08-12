@@ -19,7 +19,8 @@ data class Recipe(
     val creditsText: String,
     val sourceName: String,
     val pricePerServing: Double,
-    val extendedIngredients: List<ExtendedIngredient>
+    val extendedIngredients: List<ExtendedIngredient>,
+    val image: String
 )
 
 
