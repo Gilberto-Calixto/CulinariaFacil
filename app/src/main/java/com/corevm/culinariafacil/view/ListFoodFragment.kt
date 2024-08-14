@@ -8,8 +8,8 @@ import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.fragment.findNavController
 import com.corevm.culinariafacil.R
-import com.corevm.culinariafacil.model.ExtendedIngredient
 import com.corevm.culinariafacil.model.Recipe
 import com.corevm.culinariafacil.presenter.ListFoodPresenter
 
@@ -49,7 +49,11 @@ class ListFoodFragment: Fragment() {
 
         val adapter = ListFoodAdapter(recipes, imageUrls) { id ->
 
+            val navController = findNavController()
+            val action = ListFoodFragmentDirections.actionNavAllToNavFoodDay()
+            navController.navigate(R.id.nav_item)
         }
+
 
         val rcv: RecyclerView? = view?.findViewById(R.id.rcv_list_food)
         rcv?.layoutManager = LinearLayoutManager(requireContext())

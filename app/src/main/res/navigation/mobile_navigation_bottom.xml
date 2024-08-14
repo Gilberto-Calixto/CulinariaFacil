@@ -13,8 +13,8 @@
         tools:layout="@layout/fragment_list_food"
         >
         <action
-            android:id="@+id/action_nav_all_to_nav_item"
-            app:destination="@id/nav_item" />
+            android:id="@+id/action_nav_all_to_nav_food_day"
+            app:destination="@id/nav_food_day" />
     </fragment>
 
     <fragment
