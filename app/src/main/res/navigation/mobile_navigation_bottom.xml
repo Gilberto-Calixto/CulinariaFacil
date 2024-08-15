@@ -12,9 +12,10 @@
         android:name="com.corevm.culinariafacil.view.ListFoodFragment"
         tools:layout="@layout/fragment_list_food"
         >
+
         <action
-            android:id="@+id/action_nav_all_to_nav_food_day"
-            app:destination="@id/nav_food_day" />
+            android:id="@+id/action_nav_all_to_nav_item2"
+            app:destination="@id/nav_item" />
     </fragment>
 
     <fragment
