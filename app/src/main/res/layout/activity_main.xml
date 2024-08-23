@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FF9800"
     android:fitsSystemWindows="true"
-    tools:context=".view.MainActivity">
+    tools:context=".ui.MainActivity">
 
     <include
         android:id="@+id/included"

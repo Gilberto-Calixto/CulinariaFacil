@@ -1,4 +1,4 @@
-package com.corevm.culinariafacil.model
+package com.corevm.culinariafacil.utils
 
 interface Onclicklister {
 

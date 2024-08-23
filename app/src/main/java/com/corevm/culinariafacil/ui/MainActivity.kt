@@ -1,12 +1,9 @@
-package com.corevm.culinariafacil.view
+package com.corevm.culinariafacil.ui
 
 import android.os.Bundle
 import android.view.Menu
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.corevm.culinariafacil.R

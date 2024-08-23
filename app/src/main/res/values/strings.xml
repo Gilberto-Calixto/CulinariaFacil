@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Culinaria Facil</string>
+    <string name="ingridients">Ingredientes</string>
+    <string name="name_ingridient">Nome</string>
+    <string name="qauntium_ingridient">Quantidade</string>
 </resources>

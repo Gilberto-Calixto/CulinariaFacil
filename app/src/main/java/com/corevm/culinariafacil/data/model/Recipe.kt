@@ -1,4 +1,4 @@
-package com.corevm.culinariafacil.model
+package com.corevm.culinariafacil.data.model
 
 data class Recipe(
     val vegetarian: Boolean,

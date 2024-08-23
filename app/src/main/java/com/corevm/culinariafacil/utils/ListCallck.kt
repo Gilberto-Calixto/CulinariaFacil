@@ -1,4 +1,6 @@
-package com.corevm.culinariafacil.model
+package com.corevm.culinariafacil.utils
+
+import com.corevm.culinariafacil.data.model.Recipe
 
 interface ListCallck {
 
