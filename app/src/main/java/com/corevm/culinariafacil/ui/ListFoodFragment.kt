@@ -51,6 +51,10 @@ class ListFoodFragment: Fragment(), Onclicklister {
             adapter.notifyDataSetChanged()
         })
 
+        viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        })
+
         viewModel.allImgsUrls.observe(viewLifecycleOwner, Observer { urls ->
             adapter.addurls(urls)
 

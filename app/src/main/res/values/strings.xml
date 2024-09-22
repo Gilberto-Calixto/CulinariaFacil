@@ -3,4 +3,5 @@
     <string name="ingridients">Ingredientes</string>
     <string name="name_ingridient">Nome</string>
     <string name="qauntium_ingridient">Quantidade</string>
+    <string name="duration">Duração</string>
 </resources>

@@ -65,6 +65,8 @@ class ListFoodAdapter(
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(img)
 
+//            duration.text =
+
             //val action = ListFoodFragmentDirections.actionNavAllToNavItem()
 
             binding.root.setOnClickListener {
