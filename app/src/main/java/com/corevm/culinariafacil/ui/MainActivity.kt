@@ -34,57 +34,7 @@ class MainActivity : AppCompatActivity() {
         val bottomNagivationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNagivationView.setupWithNavController(navController)
 
-        //Configurar ButtomNavigation
-        val serch: SearchView = findViewById(R.id.search_main)
-        serch.setOnQueryTextListener( object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
 
-                query?.let {
-                    //Realizar busca comfoeme o necessário
-                }
-
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-
-                newText?.let {
-                    //Realizar busca incremental conforme o texto muda
-                }
-
-                return false
-            }
-
-        })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.opptions_main, menu)
-
-        val serachItem = menu?.findItem(R.id.search_main)
-        val searchView = serachItem?.actionView as SearchView
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-
-                query?.let {
-
-                }
-
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-
-                newText?.let {
-
-                }
-
-                return false
-            }
-
-        })
-
-        return true
-    }
 }
