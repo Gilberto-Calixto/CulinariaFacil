@@ -9,9 +9,16 @@
         android:icon="@drawable/explore_24"/>
 
     <item
+        android:id="@+id/nav_search_foods"
+        android:title="Pesquisar"
+        android:icon="@drawable/baseline_search_24"/>
+
+    <item
         android:id="@+id/nav_food_day"
         android:title="Comida do dia"
         android:icon="@drawable/room_service_24"/>
+
+
 
 
 </menu>

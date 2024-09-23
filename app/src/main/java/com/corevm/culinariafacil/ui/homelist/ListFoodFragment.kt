@@ -1,4 +1,4 @@
-package com.corevm.culinariafacil.ui
+package com.corevm.culinariafacil.ui.homelist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -40,6 +42,10 @@ class ListFoodFragment: Fragment(), Onclicklister {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar_main_logo)
+        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         progress = view.findViewById(R.id.progress_list)
 
         viewModel.getListFood()
@@ -60,59 +66,6 @@ class ListFoodFragment: Fragment(), Onclicklister {
 
         viewModel.allImgsUrls.observe(viewLifecycleOwner, Observer { urls ->
             adapter.addurls(urls)
-
-        })
-
-
-        //Configurar ButtomNavigation
-        val serch: SearchView = view.findViewById(R.id.search_main)
-        serch.setOnQueryTextListener( object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-
-                query?.let {
-                    //Realizar busca comfoeme o necessário
-                }
-
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-
-                newText?.let {
-                    //Realizar busca incremental conforme o texto muda
-                }
-
-                return false
-            }
-
-        })
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.opptions_main, menu)
-
-        val serachItem = menu.findItem(R.id.search_main)
-        val searchView = serachItem?.actionView as SearchView
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-
-                query?.let {
-
-                }
-
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-
-                newText?.let {
-
-                }
-
-                return false
-            }
 
         })
 

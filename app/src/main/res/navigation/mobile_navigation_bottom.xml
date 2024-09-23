@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/nav_all"
         android:label="Todos"
-        android:name="com.corevm.culinariafacil.ui.ListFoodFragment"
+        android:name="com.corevm.culinariafacil.ui.homelist.ListFoodFragment"
         tools:layout="@layout/fragment_list_food"
         >
 
@@ -21,14 +21,20 @@
     <fragment
         android:id="@+id/nav_food_day"
         android:label="Comida do dia"
-        android:name="com.corevm.culinariafacil.ui.FoodDayFragment"
+        android:name="com.corevm.culinariafacil.ui.foodday.FoodDayFragment"
         tools:layout="@layout/fragment_food_day"
         />
 
     <fragment
         android:id="@+id/nav_item"
         android:label="Item"
-        android:name="com.corevm.culinariafacil.ui.ItemFragment"
+        android:name="com.corevm.culinariafacil.ui.homelist.ItemFragment"
         tools:layout="@layout/fragment_item"/>
+
+    <fragment
+        android:id="@+id/nav_search_foods"
+        android:label="Pesquisar"
+        android:name="com.corevm.culinariafacil.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search_foods"/>
 
 </navigation>

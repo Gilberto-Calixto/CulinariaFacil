@@ -1,4 +1,4 @@
-package com.corevm.culinariafacil.ui
+package com.corevm.culinariafacil.ui.homelist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
